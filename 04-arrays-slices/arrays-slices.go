@@ -13,14 +13,11 @@ func Sum(numbers []int) int {
 }
 
 func SumAll(numbersToSum ...[]int) []int {
-	// numbersToSum = []int{1, 2}, []int{1, 4}
-	// resultado = [2]int{x, y}
+	var sums []int
 
-	lengthOfNumbers := len(numbersToSum)
-	sums := make([]int, lengthOfNumbers)
-
-	for i, numbers := range numbersToSum {
-		sums[i] = Sum(numbers)
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
+		// runtime error -> sums[i] = Sum(numbers)
 	}
 
 	return sums
