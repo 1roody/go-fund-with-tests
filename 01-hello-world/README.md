@@ -1,1 +1,0 @@
-# go-fund-with-tests
