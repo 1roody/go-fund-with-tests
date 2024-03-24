@@ -16,6 +16,7 @@ func TestSearch(t *testing.T) {
 		assertError(t, got, errNotFound)
 	})
 }
+
 func TestAdd(t *testing.T) {
 	t.Run("add new word", func(t *testing.T) {
 		dictionary := Dictionary{}
@@ -38,6 +39,7 @@ func TestAdd(t *testing.T) {
 		assertDefinition(t, dictionary, word, definition)
 	})
 }
+
 func TestUpdate(t *testing.T) {
 	t.Run("existing word", func(t *testing.T) {
 		word := "test"
