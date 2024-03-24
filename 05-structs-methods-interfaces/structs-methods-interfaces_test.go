@@ -3,6 +3,7 @@ package main
 import "testing"
 
 func TestArea(t *testing.T) {
+	// table driven tests
 	areaTests := []struct {
 		name    string
 		shape   Shape
